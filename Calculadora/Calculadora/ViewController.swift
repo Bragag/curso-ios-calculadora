@@ -45,6 +45,9 @@ class ViewController: UIViewController {
                 if hasOp {
                     return
                 }
+                if firstNumberText == "- " {
+                    return
+                }
                 if firstNumberText == "0" {
                     resultLabel.text = "0"
                     return
@@ -119,7 +122,6 @@ class ViewController: UIViewController {
     }
     
     func calculate() -> Double {
-        print(firstNumberText)
         let firstNumber = Double(firstNumberText)!
         var secondNumber = 0.1
         if !["√x", "x²"].contains(op) {
